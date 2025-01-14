@@ -89,3 +89,6 @@ figures/_minted*
 
 # solution
 solution
+
+# python cache
+python/__pycache__

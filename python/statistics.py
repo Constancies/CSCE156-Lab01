@@ -21,16 +21,22 @@ def minimum(values):
     return minVal
 
 def maximum(values):
-    """TODO: write your own doc-string documentation here
+    """Finds and returns the maximum element in the given list
+    of values.
     """
-    # TODO: implement
-    return
+    maxVal = math.inf * -1
+    for x in values:
+        if x > maxVal:
+            maxVal = x
+    return maxVal
 
 def sumVals(values):
-    """TODO: write your own doc-string documentation here
+    """Returns the sum of all elements in the given list of values.
     """
-    # TODO: implement
-    return
+    sum = 0
+    for x in values:
+        sum += x
+    return sum
 
 def mean(values):
     """Computes the mean value of the numbers in the given list

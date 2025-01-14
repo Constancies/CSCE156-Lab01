@@ -29,22 +29,28 @@ monthMap = { month:months.index(month)+1 for month in months }
 
 today = date.today()
 
+if len(sys.argv) < 3:
+  print("ERROR: Not enough arguments!\n")
+  print("Usage: python3 birthday.py [YEAR] [MONTH] [DAY]")
+  print("Example: python3 birthday.py 2005 October 24")
+  exit(1)
 
-year = input("Enter your birth year (ex: 2022): ")
+# Use command line arguments instead of prompting for input
+year = sys.argv[1]
 try:
   year = int(year)
 except:
   print("ERROR: invalid input")
   exit(1)
 
-month = input("Enter your birth month (ex: July): ")
+month = sys.argv[2]
 try:
   month = monthMap[month]
 except:
   print("ERROR: invalid input")
   exit(1)
 
-day = input("Enter your birth day (of month): ")
+day = sys.argv[3]
 try:
   day = int(day)
 except:

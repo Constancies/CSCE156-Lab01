@@ -4,7 +4,7 @@ package unl.soc;
  * This is a collection of utilities to compute various statistics on arrays of
  * integers.
  * 
- * @author cbourke
+ * @author cbourke, Alexander Sanderson
  *
  */
 public class Statistics {
@@ -16,8 +16,11 @@ public class Statistics {
 	 * @return
 	 */
 	public static int getSum(int array[]) {
-		// TODO: implement
-		return 0;
+		int sum = 0;
+		for(int i : array) {
+			sum += i;
+		}
+		return sum;
 	}
 
 	/**
@@ -51,9 +54,22 @@ public class Statistics {
 		return min;
 	}
 
-	// TODO: add documentation
+	/**
+	 * Computes the maximum element in the given array of integers.
+	 * 
+	 * @param array
+	 * @return
+	 */
 	public static int getMax(int array[]) {
-		// TODO: implement
-		return 0;
+		if(array == null || array.length == 0) {
+			return 0;
+		}
+		int max = array[0];
+		for(int i = 1; i < array.length; i++) {
+			if(array[i] > max) {
+				max = array[i];
+			}
+		}
+		return max;
 	}
 }

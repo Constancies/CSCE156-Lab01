@@ -4,35 +4,42 @@ import org.joda.time.DateTime;
 import org.joda.time.Interval;
 import org.joda.time.Period;
 
-// This is some sort of java program
-// I guess, this is really bad documentation
-//so Im not ReAlLy SuRe.
-public class Birthday {public static void main(String args[]) {
-		
-String name = "Java";
+/**
+ * Author: Alexander Sanderson
+ * Date: 2025/1/12
+ * 
+ * Program for outputting information about the user's birthday
+ */
+public class Birthday {
+	public static void main(String args[]) {
 
-int 
-month = 1;
-int date  = 23;
-int year  = 1996;
+		String name = "Alexander Sanderson";
 
-DateTime              bday = 
-		   new DateTime(year, month, date, 0, 0);
-DateTime today = new DateTime();
+		int month = 10;
+		int date = 24;
+		int year = 2005;
 
-Period age = new Period(bday, today);
+		DateTime bday = new DateTime(year, month, date, 0, 0);
+		DateTime today = new DateTime();
 
-int years = age.getYears();
-int months = age.getMonths();
-int days = age.getWeeks() * 7 + age.getDays();
+		Period age = new Period(bday, today);
 
-DateTime next_bday = new DateTime(year + years + 1, month, date, 0, 0);
-Interval days_to_next_bday_i = 
-  new Interval(today, next_bday);
-double days_remaining = 
-  days_to_next_bday_i.toDurationMillis() / (1000 * 60 * 60 * 24) + 1;
+		int years = age.getYears();
+		int months = age.getMonths();
+		int days = age.getWeeks() * 7 + age.getDays();
 
-                  //TODO: write code to output results here
-		
-}
+		DateTime nextBday = new DateTime(year + years + 1, month, date, 0, 0);
+		Interval daysToNextBdayI = new Interval(today, nextBday);
+		double daysRemaining = daysToNextBdayI.toDurationMillis() / (1000 * 60 * 60 * 24) + 1;
+
+		// TODO: write code to output results here
+		System.out.println("Greetings, " + name + ". Today you are " + years + " years, " + months
+				+ " months, and " + days + " days old.");
+		if(bday.equals(today)) {
+			System.out.println("Happy Birthday");
+		} else {
+			System.out.println("Your friends have " + daysRemaining + " shopping days until your next birthday");
+		}
+
+	}
 }

@@ -12,23 +12,18 @@ import java.util.Scanner;
 public class StatisticsDemo {
 
 	public static void main(String args[]) {
-
-		Scanner s = new Scanner(System.in);
-
-		System.out.println("Please input the number of integers being entered (>=2): ");
-		int n = s.nextInt();
-		if (n < 2) {
-			System.out.println("Error: please enter at least 2");
+		int numOfInts = args.length;
+		if(numOfInts < 2) {
+			System.out.println("USAGE: StatisticsDemo [number of ints] [int 1] [int 2]...");
 			System.exit(1);
 		}
-		int array[] = new int[n];
+		
+		int array[] = new int[numOfInts];
 
-		for (int i = 0; i < n; i++) {
-			System.out.println("Enter another integer: ");
-			array[i] = s.nextInt();
+		for (int i = 0; i < numOfInts; i++) {
+			array[i] = Integer.parseInt(args[i]);
 		}
-		s.close();
-
+		
 		int min = Statistics.getMin(array);
 		int max = Statistics.getMax(array);
 		int sum = Statistics.getSum(array);

@@ -16,6 +16,8 @@ public class Statistics {
 	 * @return
 	 */
 	public static int getSum(int array[]) {
+		if (array == null || array.length < 1)
+			return 0;
 		int sum = 0;
 		for(int i : array) {
 			sum += i;
@@ -43,7 +45,7 @@ public class Statistics {
 	 * @return
 	 */
 	public static int getMin(int array[]) {
-		if (array == null || array.length == 0)
+		if (array == null || array.length < 1)
 			return 0;
 		int min = array[0];
 		for (int i = 1; i < array.length; i++) {
@@ -61,7 +63,7 @@ public class Statistics {
 	 * @return
 	 */
 	public static int getMax(int array[]) {
-		if(array == null || array.length == 0) {
+		if(array == null || array.length < 1) {
 			return 0;
 		}
 		int max = array[0];

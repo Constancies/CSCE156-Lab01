@@ -1,7 +1,7 @@
 #include <cstddef>
-
 #include "statistics.h"
-    
+
+// TODO: Refactor to use vectors instead of arrays
 int Statistics::getSum(int *array, int size) {
     if(array == NULL || size < 1) {
         return 0;

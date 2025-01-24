@@ -9,7 +9,7 @@ import statistics
 
 if len(sys.argv) <= 1:
     print("Please provide a list of numbers as command line arguments")
-    exit(1)
+    sys.exit(1)
 
 # create a list of values from the command line arguments
 # using a traditional loop:

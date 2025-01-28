@@ -32,7 +32,6 @@ public class Birthday {
 		Interval daysToNextBdayI = new Interval(today, nextBday);
 		double daysRemaining = daysToNextBdayI.toDurationMillis() / (1000 * 60 * 60 * 24) + 1;
 
-		// TODO: write code to output results here
 		System.out.println("Greetings, " + name + ". Today you are " + years + " years, " + months
 				+ " months, and " + days + " days old.");
 		if(bday.equals(today)) {

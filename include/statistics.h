@@ -6,26 +6,29 @@
  * Collection of utilities to compute statistics on integer arrays.
  */
 
+#include <vector>
+using namespace std;
+
 class Statistics {
     public:
     /**
      * Computes the sum of the elements in the array of integers.
      */
-    int getSum(int *array, int size);
+    static int getSum(vector<int> values);
 
     /**
      * Computes the average value of the elements in 
      * the array of integers.
      */
-    double getAverage(int *array, int size);
+    static double getAverage(vector<int> values);
 
     /**
      * Computes the minimum element in the array of integers.
      */
-    int getMin(int *array, int size);
+    static int getMin(vector<int> values);
 
     /**
      * Computes the maximum element in the array of integers.
      */
-    int getMax(int *array, int size);
+    static int getMax(vector<int> values);
 };

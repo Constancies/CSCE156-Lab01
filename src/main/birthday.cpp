@@ -18,21 +18,7 @@ int main(int argc, char **argv) {
         cout << "Usage: birthday [YEAR] [MONTH] [DAY]" << endl;
         exit(EXIT_FAILURE);
     }
-    // I'm unsure if c++ has an equivalent to python's Maps
-    vector<string> months;
-    months.push_back("January");
-    months.push_back("February");
-    months.push_back("March");
-    months.push_back("April");
-    months.push_back("May");
-    months.push_back("June");
-    months.push_back("July");
-    months.push_back("August");
-    months.push_back("September");
-    months.push_back("October");
-    months.push_back("November");
-    months.push_back("December");
-
+    
     string name = "Alexander Sanderson";
     
     time_t timestamp;

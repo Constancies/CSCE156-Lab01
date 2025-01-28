@@ -12,12 +12,16 @@ int main(int argc, char **argv) {
     for(int i = 1; i < argc; i++) {
         values.push_back(atoi(argv[i]));
     }
-    int numValues = argc - 1;
-    cout << "values: ";
-    for(int i = 0; i < numValues - 1; i++) {
-        cout << values[i] << ", ";
-    }
-    // print the last value separately so there isn't a comma at the end
-    cout << values[numValues - 1] << endl;
+    
+    int min = Statistics::getMin(values);
+    int max = Statistics::getMax(values);
+    int sum = Statistics::getSum(values);
+    double average = Statistics::getAverage(values);
+
+    cout << "The sum is " << sum << endl;
+    cout << "The average is " << average << endl;
+    cout << "The highest is " << max << endl;
+    cout << "The lowest is " << min << endl;
+
     exit(EXIT_SUCCESS);
 }
